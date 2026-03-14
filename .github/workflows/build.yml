@@ -2,7 +2,5 @@
   run: |
     cd android
     gradle wrapper --gradle-version 8.7
-
-# 2. DANACH Build
 - name: Build APK
   run: cd android && ./gradlew assembleRelease
