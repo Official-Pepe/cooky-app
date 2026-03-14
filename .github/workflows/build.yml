@@ -20,6 +20,11 @@ jobs:
         run: |
           cd android
           echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
+          echo "flutter.sdk=$GITHUB_WORKSPACE/fake-flutter-sdk" >> local.properties
+
+      - name: Create fake Flutter SDK dir
+        run: |
+          mkdir -p fake-flutter-sdk/packages/flutter_tools/gradle
 
       - name: Generate Gradle Wrapper
         run: |
